@@ -47,12 +47,20 @@ body{
   gap: 15px;
 }
 
-.header p {
+.header p a{
   font-weight: bold;
   color: white;
   display: inline-block;
+  text-decoration: none;
   
 }
+
+.header p {
+	font-weight: bold;
+	color: white;
+	display: inline-block;
+	
+  }
 
 .header-board{
   grid-column: 1 / 5;
