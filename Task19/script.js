@@ -10,21 +10,25 @@
    maxDiff([16]) => 0
    maxDiff([]) => 0
 */
-function maxDiff(arr){ 
-   if (arr.length<2) return 0;
-   arr.sort(compareNumeric);
-   return arr[arr.length-1]-arr[0]; ;
-};
-function compareNumeric(a, b) {
-   if (a > b) return 1;
-   if (a == b) return 0;
-   if (a < b) return -1;
+function maxDiff(arr) {
+  if (arr.length < 2) return 0;
+  arr.sort(compareNumeric);
+  return arr[arr.length - 1] - arr[0];
 }
-    
-console.log(maxDiff([0, 1, 2, 3, 4, 5, 6]));
-console.log(maxDiff([-0, 1, 2, -3, 4, 5, -6]));
-console.log(maxDiff([0, 1, 2, 3, 4, 5, 16]));
-console.log(maxDiff([16]));
-console.log(maxDiff([]));
+function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+}
 
-
+console.log(
+  "maxDiff([0, 1, 2, 3, 4, 5, 6]) => " + maxDiff([0, 1, 2, 3, 4, 5, 6])
+);
+console.log(
+  "maxDiff([-0, 1, 2, -3, 4, 5, -6]) => " + maxDiff([-0, 1, 2, -3, 4, 5, -6])
+);
+console.log(
+  "maxDiff([0, 1, 2, 3, 4, 5, 16]) => " + maxDiff([0, 1, 2, 3, 4, 5, 16])
+);
+console.log("maxDiff([16]) => " + maxDiff([16]));
+console.log("maxDiff([]) => " + maxDiff([]));

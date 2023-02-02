@@ -7,20 +7,23 @@
    example('Над містом хмари, коридори, береги, проспект, річка.', 7) => 
    ['коридори', 'проспект']
 */
-function wordsOverSize(str,minLength){ 
-   let result = [];
-   let arr = str.split(' ');
-   for (let i=0; i<arr.length;i++){
-      arr[i] = arr[i].replace(/\p{P}/gu,'');
-      if (arr[i].length>minLength) result.push(arr[i]);
-   }
-   
-   return result;
-};
-  
-console.log(wordsOverSize('Сьогодні чудовий день. З самого ранку ми підемо на озеро, купатися.', 5));
-console.log(wordsOverSize('Над містом хмари, коридори, береги, проспект, річка.', 7));
+function wordsOverSize(str, minLength) {
+  let result = [];
+  let arr = str.split(" ");
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].replace(/\p{P}/gu, "");
+    if (arr[i].length > minLength) result.push(arr[i]);
+  }
 
+  return result;
+}
 
-
-
+console.log(
+  wordsOverSize(
+    "Сьогодні чудовий день. З самого ранку ми підемо на озеро, купатися.",
+    5
+  )
+);
+console.log(
+  wordsOverSize("Над містом хмари, коридори, береги, проспект, річка.", 7)
+);

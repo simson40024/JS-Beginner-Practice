@@ -10,16 +10,12 @@
    divisibleByThree('88') => false
    divisibleByThree('1') => false
 */
-function divisibleByThree(str){ 
-   let arr = str.split('');
-   return Number.isInteger(arr.reduce((sum,i) => sum + Number(i),0)/3);
-};
-  
-console.log(divisibleByThree('123'));
-console.log(divisibleByThree('19254'));
-console.log(divisibleByThree('88'));
-console.log(divisibleByThree('1'));
+function divisibleByThree(str) {
+  let arr = str.split("");
+  return Number.isInteger(arr.reduce((sum, i) => sum + Number(i), 0) / 3);
+}
 
-
-
-
+console.log("divisibleByThree('123') => " + divisibleByThree("123"));
+console.log("divisibleByThree('19254') => " + divisibleByThree("19254"));
+console.log("divisibleByThree('88') => " + divisibleByThree("88"));
+console.log("divisibleByThree('1') => " + divisibleByThree("1"));

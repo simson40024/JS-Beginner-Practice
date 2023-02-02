@@ -8,9 +8,10 @@
    switcheroo('acb') =>'bca'
    switcheroo('aabacbaa') =>'bbabcabb'
 */
-let switcheroo = (str) => str.replace(/a/ig,'x').replace(/b/ig,'a').replace(/x/ig,'b');
-console.log(switcheroo('abc'));
-console.log(switcheroo('aaabcccbaaa'));
-console.log(switcheroo('ccccc'));
-console.log(switcheroo('acb'));
-console.log(switcheroo('aabacbaa'));
+let switcheroo = (str) =>
+  str.replace(/a/gi, "x").replace(/b/gi, "a").replace(/x/gi, "b");
+console.log("switcheroo('abc') =>" + switcheroo("abc"));
+console.log("switcheroo('aaabcccbaaa') =>" + switcheroo("aaabcccbaaa"));
+console.log("switcheroo('ccccc') =>" + switcheroo("ccccc"));
+console.log("switcheroo('acb') =>" + switcheroo("acb"));
+console.log("switcheroo('aabacbaa') =>" + switcheroo("aabacbaa"));
